@@ -9,7 +9,7 @@ namespace ConsoleApp48
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {                                    //                                                                                                                                \\
                                              //                                                Settings                                                                        \\
                                              //                                           __|___________________________________________________________________________       \\
             double alpha = 1.1;              //    Prey's natural growth rate               |       Recommended:       1 - 2     Min:           1     Max:           5         \\
@@ -23,12 +23,20 @@ namespace ConsoleApp48
             double time_step = 0.1;          //    Increments in time.                      |       Recommended:  0.05 - 0.2     Min:        0.01     Max:           5         \\
             double total_time = 24;          //    Total time to run simulation.            |       Recommended:     5 - 100     Min:           1     Max:        1000         \\
                                              //                                             |                                                                                  \\
+                                             //                                                                                                                                \\
 
+            // Store the peaks and mins with a time
             string peak_prey = $"{prey_population}, 0", peak_preditors = $"{preditor_population}, 0", min_prey = $"{prey_population}, 0", min_preditors = $"{preditor_population}, 0";
 
+            Console.WriteLine("\n                                    Population");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Initial Prey Population:            {prey_population}");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Initial Preditor Population:        {preditor_population}");
 
+            Console.ForegroundColor = ConsoleColor.White;
+
+            // Main loop
             for (double time = 0; time < total_time; time += time_step)
             {
                 double prey_growth = alpha * prey_population;
@@ -70,15 +78,22 @@ namespace ConsoleApp48
                 Console.WriteLine($"Preditor Population:                {preditor_population}");
             }
 
-            Console.WriteLine();
+            Console.WriteLine("\n                                    Population");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Final Prey Population:              {prey_population}");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Final Preditor Population:          {preditor_population}");
 
-            Console.WriteLine();
-            Console.WriteLine("                                    Population,       Time");
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("\n                                    Population,       Time");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Peak Prey:                          {peak_prey}");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Peak Preditors:                     {peak_preditors}");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Mininum Prey:                       {min_prey}");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Mininum Preditors:                  {min_preditors}");
 
             Console.ReadKey();
