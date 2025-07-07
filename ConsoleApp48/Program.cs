@@ -11,17 +11,17 @@ namespace ConsoleApp48
         static void Main(string[] args)
         {                                    //                                                                                                                                \\
                                              //                                                Settings                                                                        \\
-                                             //                                           __|___________________________________________________________________________       \\
-            double alpha = 1.1;              //    Prey's natural growth rate               |       Recommended:       1 - 2     Min:           1     Max:           5         \\
-            double beta = 0.1;               //    Preditor efficiency                      |       Recommended:  0.01 - 0.6     Min:        0.01     Max:           1         \\
-            double gamma = 0.4;              //    Preditor's death rate                    |       Recommended:   0.3 - 0.6     Min:         0.1     Max:           1         \\
-            double delta = 0.1;              //    How many prey are converted              |       Recommended:  0.05 - 0.4     Min:        0.01     Max:           1         \\
+                                             //                                           __|__________________________________________________________________________        \\
+            double alpha = 1.1;              //    Prey's natural growth rate               |    Recommended:       1 - 2     Min:           1     Max:           5            \\
+            double beta = 0.1;               //    Preditor efficiency                      |    Recommended:  0.01 - 0.6     Min:        0.01     Max:           1            \\
+            double gamma = 0.4;              //    Preditor's death rate                    |    Recommended:   0.3 - 0.6     Min:         0.1     Max:           1            \\
+            double delta = 0.1;              //    How many prey are converted              |    Recommended:  0.05 - 0.4     Min:        0.01     Max:           1            \\
                                              //    into preditor births.                    |                                                                                  \\
                                              //                                             |                                                                                  \\
-            double prey_population = 100;    //    Inital prey population.                  |       Recommended:    10 - 150     Min:           2     Max:       10000         \\
-            double preditor_population = 10; //    Inital preditor population.              |       Recommended:      1 - 15     Min:           2     Max:       10000         \\
-            double time_step = 0.1;          //    Increments in time.                      |       Recommended:  0.05 - 0.2     Min:        0.01     Max:           5         \\
-            double total_time = 24;          //    Total time to run simulation.            |       Recommended:     5 - 100     Min:           1     Max:        1000         \\
+            double prey_population = 100;    //    Inital prey population.                  |    Recommended:    10 - 150     Min:           2     Max:       10000            \\
+            double preditor_population = 10; //    Inital preditor population.              |    Recommended:      1 - 15     Min:           2     Max:       10000            \\
+            double time_step = 0.1;          //    Increments in time.                      |    Recommended:  0.05 - 0.2     Min:        0.01     Max:           5            \\
+            double total_time = 24;          //    Total time to run simulation.            |    Recommended:     5 - 100     Min:           1     Max:        1000            \\
                                              //                                             |                                                                                  \\
                                              //                                                                                                                                \\
 
