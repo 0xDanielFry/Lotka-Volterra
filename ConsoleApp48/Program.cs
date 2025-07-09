@@ -50,6 +50,7 @@ namespace ConsoleApp48
                 prey_population = prey_population + (prey_change * time_step);
                 preditor_population = preditor_population + (preditor_change * time_step);
 
+                // Checks for peak and min populations
                 if ( prey_population < double.Parse(min_prey.Split(',')[0]) ) // Mininum number of prey
                 {
                     min_prey = $"{prey_population}, {time}";
